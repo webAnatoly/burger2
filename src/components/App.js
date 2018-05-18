@@ -33,10 +33,10 @@ export default class App extends React.Component {
   }
 
   nameChangeHandler(event, id) {
-    const person = this.state.persons.findIndex(p => p.id === id);
-    const newPersons = [...this.state.persons];
-    newPersons[person].name = event.target.value;
-    this.setState(newPersons);
+    const personIndex = this.state.persons.findIndex(p => p.id === id);
+    const copyPersons = [...this.state.persons];
+    copyPersons[personIndex].name = event.target.value;
+    this.setState(copyPersons);
   }
 
   render() {
