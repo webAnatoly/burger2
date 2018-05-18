@@ -1,0 +1,15 @@
+.main {
+  color: rgb(42, 95, 112);
+  margin: auto;
+  text-align: center;
+}
+
+.button {
+  margin: auto;
+  background-color: lightblue;
+  font: inherit;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+}
