@@ -12,6 +12,7 @@ export default class App extends React.Component {
         { id: getUnicRandomNumber() + Math.random(), name: 'Tolik', age: 28 },
         { id: this.secondPersonId, name: 'Manu', age: 29 },
         { id: getUnicRandomNumber() + Math.random(), name: 'Stepha', age: 26 },
+        { id: getUnicRandomNumber() + Math.random(), name: 'Karl', age: 47 },
       ],
       showPersons: false,
     };
@@ -40,6 +41,7 @@ export default class App extends React.Component {
   }
 
   render() {
+    const buttonClassStyles = [s.button];
     let persons = null;
     if (this.state.showPersons) {
       persons = (
@@ -75,14 +77,19 @@ export default class App extends React.Component {
           }
         </div>
       );
+      buttonClassStyles.push(s.redHover);
     }
+
+    const paragraphStyles = [];
+    if (this.state.persons.length <= 2) { paragraphStyles.push(s.red); }
+    if (this.state.persons.length <= 1) { paragraphStyles.push(s.bold); }
 
     return (
       <div className={s.main}>
         <h1>Welcome to react!</h1>
-        <p>I{'\''}m a react application</p>
+        <p className={paragraphStyles.join(' ')}>I{'\''}m a react application</p>
         <button
-          className={s.button}
+          className={buttonClassStyles.join(' ')}
           onClick={this.togglePersonsHandler}
         >
           Toggle Persons

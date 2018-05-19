@@ -11,5 +11,23 @@
   border: 1px solid lightblue;
   border-radius: 5px;
   padding: 8px;
+}
+
+.button:hover {
   cursor: pointer;
+  color: black;
+  background-color: rgb(131, 212, 240);
+}
+
+.redHover:hover {
+  cursor: pointer;
+  background-color: rgb(86, 199, 236);
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
 }
