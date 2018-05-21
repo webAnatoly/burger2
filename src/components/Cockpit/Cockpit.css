@@ -1,9 +1,3 @@
-.main {
-  color: rgb(42, 95, 112);
-  margin: auto;
-  text-align: center;
-}
-
 .button {
   margin: auto;
   background-color: lightblue;
@@ -19,9 +13,10 @@
   background-color: rgb(131, 212, 240);
 }
 
-.redHover:hover {
+.secondHover:hover {
   cursor: pointer;
   background-color: rgb(86, 199, 236);
+  color: whitesmoke;
 }
 
 .red {
