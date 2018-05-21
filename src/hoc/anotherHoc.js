@@ -30,4 +30,18 @@ const anotherHocExample = (WrappedComponent, className) => (
   }
 );
 
+Если функция возвращает анонимную функция (или анонимный класс),
+то компонент в dev tools будет отображаться как <Unknown></Unknown>
+
+Например если так написать
+const anotherHocExample = (WrappedComponent, className) => {
+  const Wrapper = props => (
+    <div className={className}>
+      <WrappedComponent {...props} />
+    </div>
+  );
+  return Wrapper;
+};
+
+то компонент в dev tools будет отображаться как <Wrapper></Wrapper>
 */

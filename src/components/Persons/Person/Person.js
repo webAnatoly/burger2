@@ -26,7 +26,6 @@ class Person extends React.Component {
           onChange={this.props.change}
           value={this.props.name}
         />
-        <p>Just for test {this.state.a}</p>
       </WithClass>);
   }
 }

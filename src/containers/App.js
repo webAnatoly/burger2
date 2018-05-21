@@ -2,7 +2,7 @@ import React from 'react';
 import myPropTypes from 'prop-types';
 import s from './App.css';
 import Persons from '../components/Persons/Persons';
-import getUnicRandomNumber from '../myLib/getUnicRandomNumber';
+import getUniqueRandomNumber from '../myLib/getUniqueRandomNumber';
 import Cockpit from '../components/Cockpit/Cockpit';
 // import WithClass from '../hoc/WithClass';
 import Aux from '../hoc/Aux';
@@ -11,13 +11,13 @@ import anotherHoc from '../hoc/anotherHoc';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.secondPersonId = getUnicRandomNumber() + Math.random();
+    this.secondPersonId = getUniqueRandomNumber();
     this.state = {
       persons: [
-        { id: getUnicRandomNumber() + Math.random(), name: 'Tolik', age: 28 },
+        { id: getUniqueRandomNumber(), name: 'Tolik', age: 28 },
         { id: this.secondPersonId, name: 'Manu', age: 29 },
-        { id: getUnicRandomNumber() + Math.random(), name: 'Stepha', age: 26 },
-        { id: getUnicRandomNumber() + Math.random(), name: 'Karl', age: 47 },
+        { id: getUniqueRandomNumber(), name: 'Stepha', age: 26 },
+        { id: getUniqueRandomNumber(), name: 'Karl', age: 47 },
       ],
       showPersons: false,
     };
